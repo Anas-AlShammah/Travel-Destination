@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom'
 import './TourDetails.css'
 import Header from '../header/Header'
+import { useState } from 'react';
 function TourDetails ({tour}){
-    
+    const [isClick,setIsClick]=useState(false)
     
     let {id}=useParams();
   
@@ -17,7 +18,10 @@ function TourDetails ({tour}){
             <h4>{e.name}</h4>
             <img src={e.image} alt="Logo" />
             {/* <img src={e.image} alt="Logo" /> */}
-            <h3>{e.info}</h3>
+            <br/>
+            <button onClick={()=>setIsClick(!isClick)}>{isClick ? 'show less': "show more"}</button>
+            
+            {isClick && <h3>{e.info}</h3> }
             <h3>price: {e.price}</h3>
             </div>
             ))}
