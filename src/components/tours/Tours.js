@@ -1,10 +1,16 @@
 import './Tours.css'
+import Tour from './tour/Tour'
+
 function Tours({ data }) {
+    
     const toursdata = data.data
 
     return (
         <>
-            {
+        {toursdata.map((e) =>
+            <div key={e.id} > <Tour  tour={e} /></div>)}
+        
+            {/* {
 
                 toursdata.map(e =>
                     <div key={e.id} className='card'>
@@ -17,7 +23,7 @@ function Tours({ data }) {
 
                     </div>
                 )
-            }
+            } */}
             
         </>)
 }
