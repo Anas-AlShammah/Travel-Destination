@@ -21,7 +21,7 @@ function TourDetails ({tour}){
             <br/>
             <button onClick={()=>setIsClick(!isClick)}>{isClick ? 'show less': "show more"}</button>
             
-            {isClick && <h3>{e.info}</h3> }
+           <h3 className={isClick ?  '' : 'lineth'} >{e.info}</h3> 
             <h3>price: {e.price}</h3>
             </div>
             ))}
