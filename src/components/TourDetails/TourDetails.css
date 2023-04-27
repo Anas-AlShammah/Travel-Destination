@@ -18,3 +18,17 @@
   h3{
     color: rgb(194, 194, 25);
   }
+  .lineth{
+    -webkit-line-clamp: 3;
+    position: relative;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+  
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 22px;
+    padding-top: 5px;
+    
+    height:66px;
+  }
